@@ -103,8 +103,29 @@ const Weather: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchWeather(searchCity, 6)
-  }, [])
+    // Use Geolocation API to get the user's location
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+          .then((response) => response.json())
+          .then((data) => {
+            const city = data.address.city || DEFAULT_CITY;
+            setSearchCity(city);
+            fetchWeather(city, 6);
+          })
+          .catch((error) => {
+            console.error('Error fetching user location:', error);
+            fetchWeather(DEFAULT_CITY, 6);
+          });
+      },
+      (error) => {
+        console.error('Error getting user location:', error);
+        fetchWeather(DEFAULT_CITY, 6);
+      }
+    );
+  }, []);
 
   const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
