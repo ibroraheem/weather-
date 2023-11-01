@@ -125,7 +125,7 @@ const Weather: React.FC = () => {
     <div className="bg-cover bg-no-repeat bg-center bg-fixed h-screen flex flex-col justify-between items-center" style={{ backgroundImage: `url(${image})` }}>
       {isFetched ? (
         <>
-          <div className="flex flex-wrap justify-around pt-20 pb-6 px-6 flex-[75%] text-white text-shadow-md w-full">
+          <div className="flex flex-col md:flex-row gap-y-8 flex-wrap justify-around pt-12 md:pt-20 pb-6 px-6 flex-[75%] text-white text-shadow-md w-full">
             <DateTime timezone={timezone} />
             <Form
               value={searchCity}
