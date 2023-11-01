@@ -1,80 +1,63 @@
-![reactjs-vite-tailwindcss-boilerplate](https://user-images.githubusercontent.com/16243531/217138979-b854309c-4742-4275-a705-f9fec5158217.jpg)
+# Weather App
 
-# React Tailwindcss Boilerplate build with Vite
+The Weather App is a web application that allows users to check the weather forecast for a specific city. It uses the OpenWeatherMap API to fetch weather data.
 
-This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
+## Prerequisites
 
-## What is inside?
+Before running the Weather App locally, make sure you have the following installed on your computer:
 
-This project uses many tools like:
-
-- [Vite](https://vitejs.dev)
-- [ReactJS](https://reactjs.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Vitest](https://vitest.dev)
-- [Testing Library](https://testing-library.com)
-- [Tailwindcss](https://tailwindcss.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
+- Node.js: You can download and install Node.js from the official website at [nodejs.org](https://nodejs.org/).
 
 ## Getting Started
 
-### Install
+1. **Clone the Repository**: Start by cloning this repository to your local machine. You can use the following command in your terminal:
 
-Create the project.
+   ```bash
+   git clone <repository-url>
+   ```
 
-```bash
-npx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
+   Replace `<repository-url>` with the actual URL of the repository.
 
-Access the project directory.
+2. **Navigate to the Project Directory**: Change your working directory to the project folder by using the `cd` command. For example:
 
-```bash
-cd my-app
-```
+   ```bash
+   cd weather-app
+   ```
 
-Install dependencies.
+3. **Install Dependencies**: Once you're inside the project directory, install the required dependencies using npm. Run the following command:
 
-```bash
-pnpm install
-```
+   ```bash
+   npm install
+   ```
 
-Serve with hot reload at <http://localhost:5173>.
+   This will download and install the necessary packages specified in the `package.json` file.
 
-```bash
-pnpm run dev
-```
+4. **Get an API Key**: You'll need an API key from OpenWeatherMap to make API calls. You can obtain a free API key by signing up on the OpenWeatherMap website.
 
-### Lint
+5. **Set Your API Key**: Open the project in a code editor and locate the `API_KEY` variable in the `Weather.tsx` file. Replace `'YOUR_API_KEY'` with your actual OpenWeatherMap API key.
 
-```bash
-pnpm run lint
-```
+6. **Run the App**: After setting your API key, you can run the Weather App using the following command:
 
-### Typecheck
+   ```bash
+   npm start
+   ```
 
-```bash
-pnpm run typecheck
-```
+   This command will start a development server and open the Weather App in your default web browser.
 
-### Build
+7. **Use the App**: You can now use the Weather App to check the weather forecast for a city. Enter a city name in the search bar and click the "Search" button. The app will fetch and display the weather information for the specified city.
 
-```bash
-pnpm run build
-```
+8. **Get User Location (Optional)**: The app can also use your browser's geolocation feature to automatically determine your location and display the weather for your current city. If you allow location access when prompted, the app will use your current location as the default.
 
-### Test
+9. **Enjoy the Weather**: You can enjoy using the Weather App to check the weather forecast for various cities or your current location.
 
-```bash
-pnpm run test
-```
+## Troubleshooting
 
-View and interact with your tests via UI.
+- If you encounter any issues or errors while running the app, make sure you've followed the installation steps correctly, and check your API key.
 
-```bash
-pnpm run test:ui
-```
+- If you encounter any geolocation-related issues, ensure that your browser has permission to access your location.
 
 ## License
 
-This project is licensed under the MIT License.
+This Weather App is released under the [MIT License](LICENSE).
+
+Happy weather checking!
