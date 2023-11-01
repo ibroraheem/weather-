@@ -15,7 +15,7 @@ const DateTime = ({ timezone }) => {
   }, [timezone])
 
   return (
-    <div className="date-time">
+    <div className="date-time text-gray-800">
       <h1 className="time">
         {/* display time in hour and minute */}
         {dateTime.toLocaleTimeString('en-US', {

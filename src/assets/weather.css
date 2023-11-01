@@ -18,7 +18,7 @@
     justify-content: space-between;
     padding: 100px 75px 0;
     height: 70vh;
-    color: white;
+    color: rgba(46, 54, 74, 0.8);
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
